@@ -1,0 +1,13 @@
+{
+  "idf.currentSetup": "/home/jscholar/.espressif/v6.0.2/esp-idf",
+  "idf.customExtraVars": {},
+  "clangd.path": "/home/jscholar/.espressif/tools/esp-clang/esp-20.1.1_20250829/esp-clang/bin/clangd",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=**",
+    "--compile-commands-dir=/home/jscholar/esp/hello-world/build"
+  ],
+  "idf.openOcdConfigs": [
+    "board/esp32c6-builtin.cfg"
+  ]
+}
