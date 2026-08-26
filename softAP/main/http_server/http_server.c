@@ -2,12 +2,13 @@
 
 #include "esp_http_server.h"
 #include "esp_log.h"
+#include "web_assets.h"
 
 static const char* TAG = "http_server";
 
 static esp_err_t hello_get_handler(httpd_req_t *req) {
-    const char* resp_str = "Hello World";
-    httpd_resp_send(req, resp_str, HTTPD_RESP_USE_STRLEN);
+    const char* resp_str = web_index_html();
+    httpd_resp_send(req, resp_str, web_index_html_size());
     return ESP_OK;
 }
 
