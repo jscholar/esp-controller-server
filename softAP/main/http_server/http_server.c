@@ -25,7 +25,6 @@ httpd_handle_t start_webserver(void) {
 
     esp_err_t err = httpd_start(&server, &config);
 
-    
     httpd_register_uri_handler(server, &hello_world_uri);
     
     if (err == ESP_OK) {
