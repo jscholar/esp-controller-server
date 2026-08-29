@@ -16,6 +16,7 @@
 #include "lwip/err.h"
 #include "lwip/sys.h"
 #include "server/http_server.h"
+#include "server/ws_server.h"
 
 /* The examples use WiFi configuration that you can set via project configuration menu.
 
@@ -105,5 +106,6 @@ void app_main(void)
 {
     ESP_LOGI(TAG, "ESP_WIFI_MODE_AP");
     wifi_init_softap();
-    start_webserver();
+    httpd_handle_t server = start_webserver();
+    websocket_register(server);
 }

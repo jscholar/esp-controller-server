@@ -3,6 +3,7 @@ idf_component_register(
             "main.c" 
             "server/http_server.c" 
             "server/web_assets.c"
+            "server/ws_server.c"
         PRIV_REQUIRES 
             esp_wifi
             esp_http_server

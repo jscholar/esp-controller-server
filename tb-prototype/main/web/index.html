@@ -7,5 +7,24 @@
 </head>
 <body>
     <button>Literally just a button</button>
+
+    <div id="ws-status" style="color: green;"></div>
+
+    <input type="text" id="ws-input" placeholder="Type a message">
+    <button id="ws-send">Send</button>
+
+    <script>
+        const ws = new WebSocket('ws://' + window.location.host + '/ws');
+
+        ws.addEventListener("open", (event) => {
+            console.log('WebSocket connection opened');
+            document.getElementById('ws-status').textContent = 'WebSocket connection opened';
+        });
+
+        document.getElementById('ws-send').addEventListener('click', () => {
+            const message = document.getElementById('ws-input').value;
+            ws.send(message);
+        });
+    </script>
 </body>
 </html>
