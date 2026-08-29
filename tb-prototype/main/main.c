@@ -15,7 +15,7 @@
 #include "esp_log.h"
 #include "lwip/err.h"
 #include "lwip/sys.h"
-#include "http_server/http_server.h"
+#include "server/http_server.h"
 
 /* The examples use WiFi configuration that you can set via project configuration menu.
 

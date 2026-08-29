@@ -1,14 +1,14 @@
 idf_component_register(
         SRCS 
             "main.c" 
-            "http_server/http_server.c" 
-            "http_server/web_assets.c"
+            "server/http_server.c" 
+            "server/web_assets.c"
         PRIV_REQUIRES 
             esp_wifi
             esp_http_server
         INCLUDE_DIRS
             "." 
-            "http_server"
+            "server"
         EMBED_TXTFILES
             "web/index.html"
 )

@@ -6,12 +6,12 @@
 
 static const char* TAG = "http_server";
 
+// GET "/"
 static esp_err_t hello_get_handler(httpd_req_t *req) {
     const char* resp_str = web_index_html();
     httpd_resp_send(req, resp_str, web_index_html_size());
     return ESP_OK;
 }
-
 static const httpd_uri_t hello_world_uri= {
     .uri       = "/",               // the address at which the resource can be found
     .method    = HTTP_GET,          // The HTTP method (HTTP_GET, HTTP_POST, ...)
